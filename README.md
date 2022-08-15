@@ -32,7 +32,7 @@ dotnet add Services.Integration.API/Services.Integration.API.csproj reference Se
 dotnet run --project Services.Integration.API/Services.Integration.API.csproj  
   
 6. Add references:  
-* KeyVault:  
+6.1. KeyVault:  
 cd Services.Integration.Infrastructure  
 dotnet add package Azure.Security.KeyVault.Secrets  
 dotnet add package Azure.Identity  
