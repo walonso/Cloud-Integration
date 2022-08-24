@@ -61,4 +61,6 @@ https://docs.redis.com/latest/rs/references/client_references/client_csharp/
 https://localhost:7068/CacheDatabase?key=user:1  (get)
 https://localhost:7068/CacheDatabase/w/li   (set)
 
+Use UI tool:
+https://azure.microsoft.com/en-us/blog/view-your-azure-cache-for-redis-data-in-new-visual-studio-code-extension/
 

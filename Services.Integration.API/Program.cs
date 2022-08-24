@@ -10,7 +10,9 @@ builder.Services.AddSingleton<ISecretStorage, KeyVaultIntegration>();
 builder.Services.AddSingleton<ISecretStorageService, SecretStorageService>();
 builder.Services.AddSingleton<ICacheDatabase, RedisIntegration>();
 builder.Services.AddSingleton<ICacheDatabaseService, CacheDatabaseService>();
-var multiplexer = ConnectionMultiplexer.Connect("localhost");
+//var multiplexer = ConnectionMultiplexer.Connect("localhost");  //local
+string connectionString="walonsotestredis.redis.cache.windows.net,abortConnect=false,ssl=true,allowAdmin=true,password=8yBDzKhsfz4O5HwLaUU7Y0cW3Sv1PalFYAzCaEx6JR8=";
+var multiplexer = ConnectionMultiplexer.Connect(connectionString);
 builder.Services.AddSingleton<IConnectionMultiplexer>(multiplexer);
     
 
