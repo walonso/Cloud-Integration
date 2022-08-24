@@ -41,3 +41,24 @@ dotnet add package Azure.Identity
 az login  
 https://localhost:7068/Secret?secretName=newsecret  
 
+8.2. Redis:
+https://docs.microsoft.com/en-us/azure/azure-cache-for-redis/cache-dotnet-core-quickstart
+
+8.2.1 To work locally:
+https://redis.io/docs/getting-started/installation/install-redis-on-windows/
+https://developer.redis.com/create/windows/
+
+8.2.2 C#:
+https://docs.microsoft.com/en-us/azure/azure-cache-for-redis/cache-dotnet-core-quickstart
+https://docs.redis.com/latest/rs/references/client_references/client_csharp/
+
+-> cd Services.Integration.Infrastructure
+-> dotnet add package StackExchange.Redis
+-> cd Services.Integration.API
+-> dotnet add package StackExchange.Redis
+
+-> url:
+https://localhost:7068/CacheDatabase?key=user:1  (get)
+https://localhost:7068/CacheDatabase/w/li   (set)
+
+
