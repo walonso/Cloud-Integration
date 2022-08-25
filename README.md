@@ -64,3 +64,5 @@ https://localhost:7068/CacheDatabase/w/li   (set)
 Use UI tool:
 https://azure.microsoft.com/en-us/blog/view-your-azure-cache-for-redis-data-in-new-visual-studio-code-extension/
 
+8.3 Service Bus
+https://www.code4it.dev/blog/azure-service-bus-introduction
