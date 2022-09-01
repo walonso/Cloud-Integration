@@ -66,3 +66,19 @@ https://azure.microsoft.com/en-us/blog/view-your-azure-cache-for-redis-data-in-n
 
 8.3 Service Bus
 https://www.code4it.dev/blog/azure-service-bus-introduction
+
+.Net:
+https://docs.microsoft.com/en-us/dotnet/api/overview/azure/messaging.servicebus-readme
+https://docs.microsoft.com/en-us/dotnet/api/overview/azure/messaging.servicebus-readme#aspnet-core
+
+-> cd Services.Integration.Infrastructure
+-> dotnet add package Azure.Messaging.ServiceBus
+
+
+
+TODO:
+1. Configure Dependency injection for .Net :
+https://docs.microsoft.com/en-us/dotnet/azure/sdk/dependency-injection
+
+
+
