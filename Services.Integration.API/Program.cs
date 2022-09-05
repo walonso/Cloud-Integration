@@ -11,10 +11,16 @@ builder.Services.AddSingleton<ISecretStorageService, SecretStorageService>();
 builder.Services.AddSingleton<ICacheDatabase, RedisIntegration>();
 builder.Services.AddSingleton<ICacheDatabaseService, CacheDatabaseService>();
 //var multiplexer = ConnectionMultiplexer.Connect("localhost");  //local
-string connectionString="walonsotestredis.redis.cache.windows.net,abortConnect=false,ssl=true,allowAdmin=true,password=8yBDzKhsfz4O5HwLaUU7Y0cW3Sv1PalFYAzCaEx6JR8=";
-var multiplexer = ConnectionMultiplexer.Connect(connectionString);
+string connectionStringRedis="walonsotestredis.redis.cache.windows.net,abortConnect=false,ssl=true,allowAdmin=true,password=8yBDzKhsfz4O5HwLaUU7Y0cW3Sv1PalFYAzCaEx6JR8=";
+var multiplexer = ConnectionMultiplexer.Connect(connectionStringRedis);
 builder.Services.AddSingleton<IConnectionMultiplexer>(multiplexer);
-    
+//Service bus
+string connectionStringBus = "Endpoint=sb://walservicebus.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=ETUI7sFtic30jyTOQW+t8SToGqStjjqHGkFQ+vGEBUQ=";
+//services.AddSingleton<IMyInterface, MyInterface>();
+//builder.Services.AddSingleton<IMessageQueueService>(provider => new ServiceBusQueueIntegration(connectionStringBus)); //, provider.GetService<IMyInterface>()));
+builder.Services.AddSingleton<IMessageQueueService>(x =>
+      ActivatorUtilities.CreateInstance<ServiceBusQueueIntegration>(x, connectionStringBus));
+
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

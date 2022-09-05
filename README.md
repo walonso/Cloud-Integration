@@ -67,18 +67,45 @@ https://azure.microsoft.com/en-us/blog/view-your-azure-cache-for-redis-data-in-n
 8.3 Service Bus
 https://www.code4it.dev/blog/azure-service-bus-introduction
 
-.Net:
-https://docs.microsoft.com/en-us/dotnet/api/overview/azure/messaging.servicebus-readme
-https://docs.microsoft.com/en-us/dotnet/api/overview/azure/messaging.servicebus-readme#aspnet-core
-
 -> cd Services.Integration.Infrastructure
 -> dotnet add package Azure.Messaging.ServiceBus
 
+Create ServiceBus and Queue:
+https://docs.microsoft.com/en-us/azure/service-bus-messaging/service-bus-dotnet-get-started-with-queues
 
+-> browse message in ServiceBus
+https://docs.microsoft.com/es-es/azure/service-bus-messaging/explorer
+
+-> url:
+https://localhost:7068/MessageQueue/SetMessage/messageInQueue  (set)
+https://localhost:7068/MessageQueue  (get)
+
+-> .Net:
+https://docs.microsoft.com/en-us/dotnet/api/overview/azure/messaging.servicebus-readme
+https://docs.microsoft.com/en-us/dotnet/api/overview/azure/messaging.servicebus-readme#aspnet-core
+ttl -> https://docs.microsoft.com/es-es/azure/service-bus-messaging/message-expiration?WT.mc_id=Portal-Microsoft_Azure_ServiceBus
+duplication -> https://docs.microsoft.com/es-es/azure/service-bus-messaging/duplicate-detection?WT.mc_id=Portal-Microsoft_Azure_ServiceBus
+failed (letered) -> https://docs.microsoft.com/es-es/azure/service-bus-messaging/service-bus-dead-letter-queues?WT.mc_id=Portal-Microsoft_Azure_ServiceBus
+partitions -> https://docs.microsoft.com/es-es/azure/service-bus-messaging/service-bus-partitioning?WT.mc_id=Portal-Microsoft_Azure_ServiceBus
+sessions -> https://docs.microsoft.com/es-es/azure/service-bus-messaging/message-sessions?WT.mc_id=Portal-Microsoft_Azure_ServiceBus
+resend -> https://docs.microsoft.com/es-es/azure/service-bus-messaging/service-bus-auto-forwarding?WT.mc_id=Portal-Microsoft_Azure_ServiceBus
+
+-> code:
+https://github.com/Azure/azure-sdk-for-net/tree/main/sdk/servicebus/Azure.Messaging.ServiceBus
+
+-> Queues vs topics:
+https://docs.microsoft.com/en-us/azure/service-bus-messaging/service-bus-messaging-overview
+
+
+
+9. Dependency Injection:
+https://docs.microsoft.com/en-us/dotnet/core/extensions/dependency-injection-usage
+https://docs.microsoft.com/en-us/dotnet/core/extensions/dependency-injection-guidelines
+https://www.c-sharpcorner.com/UploadFile/3d39b4/constructor-dependency-injection-pattern-implementation-in-c/
 
 TODO:
 1. Configure Dependency injection for .Net :
 https://docs.microsoft.com/en-us/dotnet/azure/sdk/dependency-injection
-
+https://github.com/Azure/azure-sdk-for-net/tree/main/sdk/servicebus/Azure.Messaging.ServiceBus#aspnet-core
 
 
