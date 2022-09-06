@@ -98,6 +98,12 @@ https://docs.microsoft.com/en-us/azure/service-bus-messaging/service-bus-messagi
 
 -> examples:
 https://docs.microsoft.com/en-us/samples/azure/azure-sdk-for-net/azuremessagingservicebus-samples/
+ 
+-> implementation:
+* Azure function trigger service bus
+* BackgroundService - https://docs.microsoft.com/en-us/aspnet/core/fundamentals/host/hosted-services?view=aspnetcore-6.0&tabs=visual-studio#consuming-a-scoped-service-in-a-background-task
+https://www.c-sharpcorner.com/article/getting-started-with-azure-service-bus-queues-asp-net-core-background-services/
+
 
 9. Dependency Injection:
 https://docs.microsoft.com/en-us/dotnet/core/extensions/dependency-injection-usage
