@@ -96,7 +96,8 @@ https://github.com/Azure/azure-sdk-for-net/tree/main/sdk/servicebus/Azure.Messag
 -> Queues vs topics:
 https://docs.microsoft.com/en-us/azure/service-bus-messaging/service-bus-messaging-overview
 
-
+-> examples:
+https://docs.microsoft.com/en-us/samples/azure/azure-sdk-for-net/azuremessagingservicebus-samples/
 
 9. Dependency Injection:
 https://docs.microsoft.com/en-us/dotnet/core/extensions/dependency-injection-usage
