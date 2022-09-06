@@ -105,6 +105,11 @@ https://docs.microsoft.com/en-us/samples/azure/azure-sdk-for-net/azuremessagings
 https://www.c-sharpcorner.com/article/getting-started-with-azure-service-bus-queues-asp-net-core-background-services/
 
 
+8.4 Storage Account (Blobs)
+8.5 Application insights.
+8.6 Event Grid / Hub
+
+
 9. Dependency Injection:
 https://docs.microsoft.com/en-us/dotnet/core/extensions/dependency-injection-usage
 https://docs.microsoft.com/en-us/dotnet/core/extensions/dependency-injection-guidelines
