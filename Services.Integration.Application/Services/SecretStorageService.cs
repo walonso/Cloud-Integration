@@ -12,7 +12,7 @@ public class SecretStorageService : ISecretStorageService {
 
     public async Task<string> GetSecretAsync(string nameSecret){
         SecretStorageConfig storageConfig = new SecretStorageConfig();
-        storageConfig.NameStorageSecret="walonsokvtest";
+        storageConfig.NameStorageSecret= "bootcampcloudkv";
         this._secretStorage.SetConfig(storageConfig);
 
         return await this._secretStorage.GetSecretAsync(nameSecret);
