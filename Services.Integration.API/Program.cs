@@ -20,6 +20,7 @@ string connectionStringBus = "Endpoint=sb://walservicebus.servicebus.windows.net
 //builder.Services.AddSingleton<IMessageQueueService>(provider => new ServiceBusQueueIntegration(connectionStringBus)); //, provider.GetService<IMyInterface>()));
 builder.Services.AddSingleton<IMessageQueueService>(x =>
       ActivatorUtilities.CreateInstance<ServiceBusQueueIntegration>(x, connectionStringBus));
+builder.Services.AddSingleton<IBlobStorageService, StorageAccountIntegration>();
 
 
 builder.Services.AddControllers();
@@ -30,11 +31,11 @@ builder.Services.AddSwaggerGen();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
-{
+//if (app.Environment.IsDevelopment())
+//{
     app.UseSwagger();
     app.UseSwaggerUI();
-}
+//}
 
 app.UseHttpsRedirection();
 
