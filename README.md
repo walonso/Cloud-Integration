@@ -106,8 +106,38 @@ https://www.c-sharpcorner.com/article/getting-started-with-azure-service-bus-que
 
 
 8.4 Storage Account (Blobs)
+* .Net : Azure.Storage.Blobs
+
+
 8.5 Application insights.
 8.6 Event Grid / Hub
+
+- Event Grid:
+* System Topics: Subscribe to events published by Azure services
+supported: https://learn.microsoft.com/es-es/azure/event-grid/system-topics?WT.mc_id=Portal-Microsoft_Azure_EventGrid#azure-services-that-support-system-topics
+* Topics: Publish your application's events and enable downstream solutions to subscribe to them
+Simple event-driven model
+Publish your application (custom) events
+Deliver events to other applications you own or to third-party subscribers
+* Domains: Deliver application events to multiple teams at scale
+Suitable for solutions like platforms that require to send custom events to many groups of applications
+Achieve event segregation for different groups
+Single publishing endpoint for many topics (groups)
+* Partner Topics: Subscribe to events published by Microsoft Graph API
+React to events from Azure AD, Teams, Outlook, SharePoint, Security Alerts, Microsoft Conversations and Univesal Print
+Subscribe to events published by external Event Grid Partners
+React to event published by SaaS partners
+Synchronize your custom application on Azure to your resource's state with your SaaS provider.
+* Topics in Kubernetes: Publish your application events on Kubernetes
+Simple event-driven model on Kubernetees
+Publish your application (custom) events
+Deliver events to other applications you own or to third-party subscribers
+
+Exercise: use Topics (Event Grid).
+ 
+
+
+
 
 
 9. Dependency Injection:

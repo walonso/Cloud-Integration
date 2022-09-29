@@ -16,11 +16,7 @@ public class KeyVaultIntegration : ISecretStorage
         string keyVaultUrl = $"https://{this._secretStorageConfig.NameStorageSecret}.vault.azure.net";
 
         // Use userAssignedClientId setting application when keyvault access is given to an user assigned managed or leave it empty when A system assigned managed identity is used.
-        var credentials = new DefaultAzureCredential();// new DefaultAzureCredentialOptions() { ExcludeManagedIdentityCredential=true });
-         /* var credentials = String.IsNullOrWhiteSpace(this._secretStorageConfig.AuthenticationConnectionString) ? 
-             new DefaultAzureCredential() : 
-             new DefaultAzureCredential(new DefaultAzureCredentialOptions { ManagedIdentityClientId = this._secretStorageConfig.AuthenticationConnectionString }); */
-
+        var credentials = new DefaultAzureCredential();
          SecretClient client = new SecretClient(new Uri(keyVaultUrl), credentials);
         var secret = await client.GetSecretAsync(secretName);
         
