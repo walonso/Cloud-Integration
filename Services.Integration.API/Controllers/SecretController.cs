@@ -22,7 +22,7 @@ public class SecretController : ControllerBase
     public async Task<string> Get(string secretName)
     {
         SecretStorageConfig config = new SecretStorageConfig();
-        config.NameStorageSecret= "bootcampcloudkv";
+        config.NameStorageSecret= "bootcampcloudkv2";
 
         return await _secretStorageService.GetSecretAsync(secretName);                
     }
