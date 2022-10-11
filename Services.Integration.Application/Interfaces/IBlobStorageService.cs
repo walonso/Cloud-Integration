@@ -4,6 +4,6 @@ namespace Services.Integration.Application.Interfaces;
 
 public interface IBlobStorageService
 {
-    Task<string> GetBlob(string storageAccountName, string containerName, string blobName, string accessKey);
+    Task<string> GetBlob(string storageAccountName, string containerName, string blobName);
 }
 
