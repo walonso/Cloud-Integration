@@ -19,18 +19,14 @@ public class MessageQueueController : ControllerBase
     }
 
     [HttpGet(Name = "GetMessage")]
-    public async Task<string> GetMessage()
+    public async Task<string> GetMessage(string queueName, bool completeMessage)
     {
-        string queueName="myqueue";
-        bool completeMessage=true;
         return await _messageQueueService.ReceiveMessageQueueAsync(queueName,completeMessage);                
     }
 
-//TODO: Change to post
-    [HttpGet("SetMessage/{message}")]
-    public async Task<bool> Get(string message)
-    {
-        string queueName="myqueue";        
+    [HttpPost("SetMessage")]
+    public async Task<bool> Set(string queueName, string message)
+    {    
         await _messageQueueService.SendMessageQueueAsync(queueName, message);  
         return true;         
     }

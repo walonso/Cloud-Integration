@@ -14,11 +14,11 @@ builder.Services.AddSingleton<ISecretStorageService, SecretStorageService>();
 builder.Services.AddSingleton<ICacheDatabase, RedisIntegration>();
 builder.Services.AddSingleton<ICacheDatabaseService, CacheDatabaseService>();
 //var multiplexer = ConnectionMultiplexer.Connect("localhost");  //local
-string connectionStringRedis="walonsotestredis.redis.cache.windows.net,abortConnect=false,ssl=true,allowAdmin=true,password=8yBDzKhsfz4O5HwLaUU7Y0cW3Sv1PalFYAzCaEx6JR8=";
+string connectionStringRedis="walonsotestredis.redis.cache.windows.net,abortConnect=false,ssl=true,allowAdmin=true,password=[PASSWORD]";
 var multiplexer = ConnectionMultiplexer.Connect(connectionStringRedis);
 builder.Services.AddSingleton<IConnectionMultiplexer>(multiplexer);
 //Service bus
-string connectionStringBus = "Endpoint=sb://walservicebus.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=ETUI7sFtic30jyTOQW+t8SToGqStjjqHGkFQ+vGEBUQ=";
+string connectionStringBus = "Endpoint=sb://bootcamparroyoservicebus.servicebus.windows.net/;SharedAccessKeyName=send;SharedAccessKey=[KEY]";
 //services.AddSingleton<IMyInterface, MyInterface>();
 //builder.Services.AddSingleton<IMessageQueueService>(provider => new ServiceBusQueueIntegration(connectionStringBus)); //, provider.GetService<IMyInterface>()));
 builder.Services.AddSingleton<IMessageQueueService>(x =>
